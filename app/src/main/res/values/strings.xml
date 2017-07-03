@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SensorsTest</string>
+    <string name="title_activity_sensor_display_genertic">SensorDisplayGenertic</string>
+</resources>
