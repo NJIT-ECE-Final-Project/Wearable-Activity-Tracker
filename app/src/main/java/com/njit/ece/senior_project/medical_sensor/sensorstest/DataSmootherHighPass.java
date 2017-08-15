@@ -8,7 +8,7 @@ import android.util.Pair;
  * Smooths data sent to it by averaging over an interval and returning the average once
  * the interval is over
  *
- * Also performs a low pass on the data
+ * Also performs a high pass on the data
  */
 public class DataSmootherHighPass {
 
@@ -47,7 +47,7 @@ public class DataSmootherHighPass {
             intervalEnd = intervalBegin + intervalLength;
         } else {
 
-            // low-pass filter recurrence relation
+            // high-pass filter recurrence relation
             currVal = ALPHA*(currVal + currData - prevData);
 
             if (currTime > intervalEnd) {
